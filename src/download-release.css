@@ -1,0 +1,137 @@
+.release-notes {
+  padding: 110px clamp(24px, 8vw, 125px);
+  background: #eef3f5;
+}
+
+.release-notes-heading {
+  max-width: 880px;
+  margin-bottom: 58px;
+}
+
+.release-version {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #d9ebe9;
+  color: var(--teal);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.release-notes-heading h2 {
+  margin-top: 18px;
+  font-size: clamp(42px, 5vw, 64px);
+}
+
+.release-notes-heading p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.release-notes-grid {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.release-highlights,
+.release-card {
+  background: #fff;
+  border: 1px solid #d9e1e5;
+  padding: 42px;
+  box-shadow: 0 12px 28px rgba(16, 43, 75, .07);
+}
+
+.release-highlights h3,
+.release-card h3 {
+  margin: 0 0 24px;
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: 27px;
+}
+
+.release-highlights ul,
+.release-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.release-highlights li,
+.release-card li {
+  position: relative;
+  padding: 10px 0 10px 24px;
+  border-bottom: 1px solid #edf0f2;
+  color: #536170;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.release-highlights li::before,
+.release-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-weight: 800;
+}
+
+.release-side {
+  display: grid;
+  gap: 22px;
+}
+
+.release-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.release-card-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  background: #dff0ee;
+  color: var(--teal);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.release-caution {
+  border-top: 4px solid #d99a39;
+}
+
+.release-caution .release-card-icon {
+  background: #f7ead4;
+  color: #a66a12;
+}
+
+.release-caution li::before {
+  content: "•";
+  color: #d08a25;
+}
+
+@media (max-width: 850px) {
+  .release-notes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .release-notes {
+    padding: 75px 20px;
+  }
+
+  .release-highlights,
+  .release-card {
+    padding: 30px 24px;
+  }
+}

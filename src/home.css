@@ -1,0 +1,30 @@
+/* Keep homepage packet previews at the same US Letter portrait ratio. */
+.template-gallery figure > div,
+.template-gallery .featured > div {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8.5 / 11;
+  padding: 10px;
+}
+
+.template-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 780px) {
+  .template-gallery figure > div,
+  .template-gallery .featured > div {
+    height: auto;
+    aspect-ratio: 8.5 / 11;
+  }
+}
+
+@media (max-width: 480px) {
+  .template-gallery figure > div,
+  .template-gallery .featured > div {
+    height: auto;
+  }
+}

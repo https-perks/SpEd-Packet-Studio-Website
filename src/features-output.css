@@ -1,0 +1,22 @@
+.output-stack img {
+  width: min(38%, 340px);
+  height: auto;
+  max-width: none;
+  max-height: 500px;
+  object-fit: contain;
+  object-position: center;
+  margin-left: -85px;
+}
+
+.output-stack img:first-child {
+  margin-left: 0;
+}
+
+@media (max-width: 650px) {
+  .output-stack img {
+    width: 44%;
+    height: auto;
+    max-height: 340px;
+    margin-left: -55px;
+  }
+}
