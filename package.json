@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "installer:update": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-installer.ps1",
+    "installer:check": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-installer.ps1 -DryRun"
   },
   "devDependencies": {
     "vite": "^7.1.9"
